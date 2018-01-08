@@ -7,6 +7,10 @@ function colores() {
   setTimeout('colores()', 800);
 }
 $(document).ready(function() {
+	
+	var $users=[ ];
+	localStorage.setItem('users', JSON.stringify($users));
+
   setTimeout(function() {
     window.location.href = 'views/principalView.html';
   }, 6000);
