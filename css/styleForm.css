@@ -54,3 +54,8 @@ body {
 .fijar {
   margin-top: -135px;
 }
+.selects-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
