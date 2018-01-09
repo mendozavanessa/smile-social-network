@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*********************divison de las tres secciones********************/
+section {
+  outline: 1px solid blue;
+}
+.seccion1{
+  width: 30%;
+  height: 100vh;
+  margin-top: 8.5em;
+  position: fixed;
+  left: 0;
+}
+.bienvenido {
+  width: 80%;
+  height: 25vh;
+  outline: 1px solid green;
+  margin: auto;
+  margin-top: 3em;
+  flex-direction: column;
+}
+.bienvenido img {
+  margin: auto;
+}
+.grupos {
+  width: 80%;
+  height: 45vh;
+  outline: 1px solid green;
+  margin: auto;
+  margin-top: 2em;
+}
+.newsfeed {
+  width: 50%;
+  height: 100vh;
+  margin-top: 8.5em;
+  position: absolute;
+  margin-left: 30%;
+}
+.seccion3 {
+  width: 20%;
+  height: 100vh;
+  margin-top: 8.5em;
+  position: fixed;
+  right: 0;
+}
+.contacto {
+  outline: 1px solid red;
+}
+/****************************************************************************/
+.container {
+	margin: 0 auto;
+	padding: 20px 0 50px;
+	max-width: 1024px;
+	width: 100%;
+}
+.clearfix {
+  margin: 50px 0;
+}
+
+.info, form {
+	background-color: #fff;
+	border-radius: 4px;
+	float: left;
+	width: calc(50% - 10px);
+}
+
+/* Info user*/
+
+.info {
+	margin-right: 20px;
+}
+
+.info-title {
+	margin-bottom: 15px;
+}
+
+.info-text {
+	line-height: 1.5;
+	padding: 25px 20px 10px;
+}
+
+.info-code {
+	border-top: 1px solid #d8e6f3;
+	color: #002266;
+	font-weight: 900;
+	padding: 20px 20px 25px;
+	text-transform: uppercase;
+}
+
+
+/*Form*/
+
+form {
+	padding: 25px 15px;
+}
+textarea {
+	border-top: none;
+	border-right: none;
+	border-bottom: 2px solid #cccccc;
+	border-left: none;
+	font-size: 16px;
+	min-height: 80px;
+	outline: none;
+	resize: none;
+	width: 100%;
+	transition: border-color 0.4s;
+	overflow: hidden;
+}
+
+textarea:focus {
+	border-color: #336699;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+	color: #fafafa;
+}
+
+.footer-form {
+	padding-top: 25px;
+}
+
+.tweet-btn, .count {
+	font-weight: 700;
+}
+
+.tweet-btn {
+	background-color: #1da1f2;
+	border: 1px solid #0b7bc1;
+	border-radius: 4px;
+	color: #ffffff;
+	font-family: Courier;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+.tweet-btn:disabled {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+}
+
+.count {
+	float: right;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+/* Tweet */
+
+.nuevo-mensaje {
+	background-color: #fff;
+	border-radius: 5px;
+  margin: 1.5% auto;
+  padding: 1%;
+}
+
+.tweet {
+	display: block;
+	overflow-wrap: break-word;
+}
+
+.tweet i {
+	display: block;
+	margin-top: 15px;
+}
+
+.seagreen {
+  color: seagreen;
+}
+
+.greenyellow {
+  color: greenyellow;
+}
+
+.orangered {
+  color: orangered;
+}
+
+.red {
+  color: red;
+}
+/* Helpers */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

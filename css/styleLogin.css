@@ -7,10 +7,10 @@
 }
 
 body {
-    background: url(../img/bg2.jpg);
+    background: url(../assets/img/fondo2.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: Roboto;
 }
 
 .contenedor-form {
@@ -33,15 +33,15 @@ body {
     font-size: 12px;
     line-height: 25px;
     text-align: center;
-    border-top: 2px solid #ff851b;
-    border-bottom: 2px solid #ff851b;
+    border-top: 2px solid rgb(0, 255, 255);
+    border-bottom: 2px solid rgb(0, 255, 255);
     cursor: pointer;
     transition: all .5s ease;
 }
 
 .contenedor-form .toggle:hover {
-    border-top: 2px solid #0075d9;
-    border-bottom: 2px solid #0075d9;
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid yellow;
 }
 
 .contenedor-form .toggle span {
@@ -62,13 +62,12 @@ body {
     width: 100%;
     padding: 10px 15px;
     margin: 0 0 20px 0;
-    background: rgba(0,0,0,.5);
-    color: #fff;
+    background: rgba(0,10,255,.5);
+    color: aqua;
     border: none;
     border-radius: 2px;
-    border-bottom: 4px solid #ff851b;
+    border-bottom: 4px solid aqua;
     box-sizing: border-box;
-    font-family: Roboto;
     font-size: 14px;
     font-weight:normal;
     transition: all .5s ease;
@@ -77,25 +76,25 @@ body {
 .contenedor-form input[type="text"]:focus,
 .contenedor-form input[type="password"]:focus,
 .contenedor-form input[type="email"]:focus {
-    border-bottom: 4px solid #0075d9;
+    border-bottom: 4px solid yellow;
 }
 
 .contenedor-form input[type="submit"] {
-    background: #FF851B;
-    color: #FFF;
+    background: rgb(158, 255, 255);
+    color: blue;
+    font-weight: 900;
     width: 100%;
     border: none;
     padding: 10px 0;
     font-size: 16px;
-    font-weight: normal;
-    font-family: Roboto;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all .5s ease;
 }
 
 .contenedor-form input[type="submit"]:hover {
-    background: rgba(0, 117, 217, 0.7);
+    background: rgb(255, 255, 0);
+    color: black;
 }
 
 .contenedor-form .reset-password {
