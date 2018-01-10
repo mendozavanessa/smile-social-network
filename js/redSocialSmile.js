@@ -94,4 +94,12 @@ window.addEventListener('load', function() {
 	} else {
 		$genderL.text('o');
 	}
+	
+	if ($('.menu-colum').attr('hidden', true)) {
+    $('.menu-colum').removeClass('hidden');
+    $('#options').click(function() {
+      $('.menu-colum').toggle('slow');
+    });
+  }
+	
 });

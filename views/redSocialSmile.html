@@ -37,11 +37,11 @@
 					<div class="col-md-5 col-xs-5">
 						<ul class="menu">
 							<li><a href="menu1_amigos.html" target="_blank" class="green">ANNIE</a> <img src="../assets/img/usuario.png" alt=""> </li>
-							<li><a href="menu2_recuerdos.html" target="_blank" class="red"><span class="	glyphicon glyphicon-home icono"></span></a></li>
-							<li><a href="menu4_peliculas.html" target="_blank" class="celeste"><span class="	glyphicon glyphicon-envelope icono"></span></a></li>
-							<li><a href="menu4_peliculas.html" target="_blank" class="azul"><span class="	glyphicon glyphicon-bell icono"></span></a></li>
-							<li><a href="menu4_peliculas.html" target="_blank" class="amarillo"><span class="	glyphicon glyphicon-warning-sign icono opcion"></span></a></li>
-							<li><a href="menu5_videos.html" target="_blank" class="pink">OPCIONES<span class="	glyphicon glyphicon-menu-down"></span></a></li>
+							<li><a href="../views/redSocialSmile.html" class="red"><span class="	glyphicon glyphicon-home icono"></span></a></li>
+							<li><a href="../views/redSocialSmile.html" class="celeste"><span class="	glyphicon glyphicon-envelope icono"></span></a></li>
+							<li><a href="../views/redSocialSmile.html" class="azul"><span class="	glyphicon glyphicon-bell icono"></span></a></li>
+							<li><a href="../views/redSocialSmile.html" class="amarillo"><span class="	glyphicon glyphicon-warning-sign icono opcion"></span></a></li>
+							<li id="options"><a href="../views/principalView.html" class="pink">SALIR</a></li><span class="glyphicon glyphicon-menu-down"></span>
 						</ul>
 					</div>
 				</div>
@@ -98,15 +98,15 @@
 	  			<div class="col-md-12">
 	  			<!--Post image-->
 							<div class="uploader-container">
-								<progress value="0" max="100" id="uploader">0%</progress>
-							  <input type="file" value="upload" id="fileButton">
+								<progress class="btn  btn-warning " value="0" max="100" id="uploader">0%</progress>
+							  
 							</div>
 						<div class="clearfix">
 							<form>
 								<textarea id="tweet-area" placeholder="Sonríe y publica" autofocus></textarea>
 								<img id="image-post" src="">
 								<div class="footer-form clearfix">
-									<input id="tweet-btn" class="tweet-btn" type="submit" value="Publicar" disabled>
+									<input id="tweet-btn" class="tweet-btn" type="submit" value="Publicar" disabled><input class="btn btn-warning" type="file" value="upload" id="fileButton">
 									<span id="count" class="count"></span>
 								</div>
 							</form>
