@@ -36,11 +36,11 @@
 					</div>
 					<div class="col-md-5 col-xs-5">
 						<ul class="menu">
-							<li><a href="menu1_amigos.html" target="_blank" class="green">ANNIE</a> <img src="../assets/img/usuario.png" alt=""> </li>
-							<li><a href="../views/redSocialSmile.html" class="red"><span class="	glyphicon glyphicon-home icono"></span></a></li>
-							<li><a href="../views/redSocialSmile.html" class="celeste"><span class="	glyphicon glyphicon-envelope icono"></span></a></li>
-							<li><a href="../views/redSocialSmile.html" class="azul"><span class="	glyphicon glyphicon-bell icono"></span></a></li>
-							<li><a href="../views/redSocialSmile.html" class="amarillo"><span class="	glyphicon glyphicon-warning-sign icono opcion"></span></a></li>
+							<li><a href="menu1_amigos.html" target="_blank" class="green hidden-xs name-queries">ANNIE</a> <img class="name-queries" src="../assets/img/usuario.png" alt=""> </li>
+							<li><a href="../views/redSocialSmile.html" class="red hidden-xs name-queries"><span class="	glyphicon glyphicon-home icono"></span></a></li>
+							<li><a href="../views/redSocialSmile.html" class="celeste hidden-xs name-queries"><span class="	glyphicon glyphicon-envelope icono"></span></a></li>
+							<li><a href="../views/redSocialSmile.html" class="azul hidden-xs name-queries"><span class="	glyphicon glyphicon-bell icono"></span></a></li>
+							<li><a href="../views/redSocialSmile.html" class="amarillo hidden-xs name-queries"><span class="	glyphicon glyphicon-warning-sign icono opcion"></span></a></li>
 							<li id="options"><a href="../views/principalView.html" class="pink">SALIR</a></li><span class="glyphicon glyphicon-menu-down"></span>
 						</ul>
 					</div>
@@ -53,12 +53,13 @@
 	  	<div class="container-fluid">
 	  		<div class="row">
 	  			<div class="col-md-12">
-	  				<div class="bienvenido seccion1-bienvenida flex center">
-							<h2>Bienvenid<span class="genderL"></span><span class="icon-happy"></span> <strong class="userIdent">ANNIE</strong> </h2>
-							<img src="../assets/img/annie1.jpg" alt="">
-							<h3>Anny girl</h3>
+	  				<div class="bienvenido seccion1-bienvenida flex center hidden-xs">
+							<h2>Bienvenid<span class="genderL"></span><span class="icon-happy"></span> <strong class="userIdent">ANNIE</strong></h2>
+							<img src="../assets/img/user.png" alt="">
+							<br>
+							<p>¿Como te gustaria que te llamen tus amigos?</p>
 	  				</div>
-						<div class="seccion1-bienvenida">
+						<div class="seccion1-bienvenida hidden-xs">
 							<h2>Grupos Sugeridos <span class="icon-happy"></span></h2>
 							<ul>
 		  					<li class="contacto"><img src="../assets/img/contacto1.jpg" alt="">Contacto</li>
@@ -66,7 +67,7 @@
 		  					<li class="contacto"><img src="../assets/img/contacto1.jpg" alt="">Contacto</li>
 		  				</ul>
 						</div>
-						<div class="seccion1-bienvenida">
+						<div class="seccion1-bienvenida hidden-xs">
 							<h2>Actividad de Amigos <span class="icon-happy"></span></h2>
 		  				<ul>
 		  					<li class="contacto"><img src="../assets/img/contacto1.jpg" alt="">Contacto</li>
@@ -77,7 +78,7 @@
 		  					<li class="contacto"><img src="../assets/img/contacto1.jpg" alt="">Contacto</li>
 		  				</ul>
 						</div>
-						<div class="seccion1-bienvenida">
+						<div class="seccion1-bienvenida hidden-xs">
 							<h2>Amigos que puedas conocer <span class="icon-happy"></span></h2>
 		  				<ul>
 		  					<li class="contacto"><img src="../assets/img/contacto1.jpg" alt="">Contacto</li>
@@ -98,20 +99,20 @@
 	  			<div class="col-md-12">
 	  			<!--Post image-->
 							<div class="uploader-container">
-								<progress class="btn  btn-warning " value="0" max="100" id="uploader">0%</progress>
-							  
+								<progress value="0" max="100" id="uploader">0%</progress>
+							  <input class="btn btn-warning" type="file" value="upload" id="fileButton">
 							</div>
 						<div class="clearfix">
 							<form>
 								<textarea id="tweet-area" placeholder="Sonríe y publica" autofocus></textarea>
 								<img id="image-post" src="">
 								<div class="footer-form clearfix">
-									<input id="tweet-btn" class="tweet-btn" type="submit" value="Publicar" disabled><input class="btn btn-warning" type="file" value="upload" id="fileButton">
+									<input id="tweet-btn" class="tweet-btn" type="submit" value="Publicar" disabled>
 									<span id="count" class="count"></span>
 								</div>
 							</form>
 						</div>
-						<div id="messages"></div>
+						<div id="messages" class=""></div>
 						<div class="foto-publicada">
 							<div class="flex center img-name">
 								<div class="img-face linea">
@@ -168,7 +169,7 @@
 	  		</div>
 	  	</div>
 	  </section>
-	  <section class="seccion3">
+	  <section class="seccion3 hidden-sm hidden-xs">
 	  	<div class="container-fluid">
 	  		<div class="row">
 	  			<div class="col-md-12">
@@ -190,7 +191,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><strong>Photo selected</strong></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -283,14 +284,14 @@
          });
 			
 			  myModal.setAttribute('class','modal show');
-			function savePhoto() {
-		imagePost.src = document.querySelector('#img-uploaded').src;
-		myModal.setAttribute('class','modal fade');
-	}
-			save.addEventListener('click', savePhoto);
-		  },
-		);
-	})
+			  function savePhoto() {
+		      imagePost.src = document.querySelector('#img-uploaded').src;
+		      myModal.setAttribute('class','modal fade');
+	      }
+			  save.addEventListener('click', savePhoto);
+		    },
+		  );
+	  })
 	
 	
 	

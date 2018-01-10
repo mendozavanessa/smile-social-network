@@ -49,9 +49,11 @@
   border: 1px solid blue;
   border-radius: 6px;
   padding: 0.5em 0.5em;
+	background-color: ghostwhite;
 }
 .bienvenido {
   margin-top: 3em;
+	background-color: ghostwhite;
 }
 .bienvenido img {
   margin: auto;
@@ -122,7 +124,9 @@ margin: 0 1em;
   right: 0;
 }
 .contacto {
-  outline: 1px solid red;
+	border: 1px solid blue;
+	border-radius: 6px;
+	background-color: ghostwhite;
 }
 /****************************************************************************/
 .container {
@@ -174,6 +178,7 @@ form {
   border-radius: 6px;
   width: 95%;
   margin: auto 1.3em;
+	background-color: ghostwhite;
 }
 textarea {
 	border-top: none;
@@ -298,4 +303,16 @@ textarea:focus {
 #image-post {
 	width: 18em;
 	height: auto;
+}
+#messages {
+	padding: 40px 15px 0 15px;
+  border: 1px solid blue;
+  border-radius: 6px;
+  width: 95%;
+  margin: auto 1.3em;
+}
+@media (max-width: 1060px) {
+	.name-queries {
+		display: none;
+	}
 }

@@ -1,38 +1,31 @@
-
-## FOODMAP
+## SMILE
 
 ### Objetivos
 
-Crea una web-app que a través de un input pueda filtrar los restaurantes que se encuentran cerca de ti (Tú decides la estructura que tendrán tus datos, puedes crear una lista de restaurantes en un arreglo, en un objeto, de manera individual. El diseño es totalmente libre).
++ Crear una red social para niños donde encuentren una diversion educativa distractiva propia de la edad, una red social con la autorizacion de los padres donde encuentren videos juegos, que puedan postear sus dudas, publicar imagenes de los trabajos que hicieron en su colegio y red social que brinda ue los niños se sientan felices y aprendan nuevas cosas de manera educativa :slightly_smiling_face:. 
++ Creemos la que mejor podamos y que luego  convenzamos al emprendedor de que nuestra red social será la más exitosa.
 
-#### FLUJO DE LA APLICACIÓN
+#### Puntos basicos para el emprendedor
 
-Vista splash con duración de 2 a 5 segundos que redirecciona a tu vista principal.
+Para él hay algunos puntos básicos que debe tener una red social:
++ Perfiles de usuarios
++ Un newsfeed donde puedes ver las actualizaciones de todos tus contactos
++ Un lugar donde poder escribir posts
++ Un lugar para subir fotos
++ Capacidad para poder tener amigos o para poder seguir a personas/marcas dentro de la red social
++ Ser mobile friendly
++ Etc.
+#### Flujo de la aplicacion Dektop
+![Pagina Web](https://github.com/vaneshita/smile-social-network/raw/master/assets/img/desktop.gif "Gifs-smile")
+![Pagina Web](https://github.com/vaneshita/smile-social-network/raw/master/assets/img/sign-up.gif "Gifs-smile")
+![Pagina Web](https://github.com/vaneshita/smile-social-network/raw/master/assets/img/log-in.gif "Gifs-smile")
+![Pagina Web](https://github.com/vaneshita/smile-social-network/raw/master/assets/img/account.gif "Gifs-smile")
 
-![logo](https://raw.githubusercontent.com/AnaSalazar/curricula-js/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/splash.jpg)
+### **Sketch**
+![Sketch](https://github.com/vaneshita/smile-social-network/raw/master/assets/img/sketch-1.png "sketch")
+![Sketch](https://github.com/vaneshita/smile-social-network/raw/master/assets/img/sketch2.png "sketch")
 
-En la vista principal se muestran todos los restaurantes "cerca de ti" junto con el input para filtrar tu elección (Los criterios de filtrado son decisión tuya, puede ser por tipo de comida, costos, orden alfabético, etc.).
+### **Alumnas**
 
-
-![logo](https://raw.githubusercontent.com/AnaSalazar/curricula-js/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/2.jpg)
-
-Ya que se hizo la elección del filtro deben mostrarse únicamente aquellos restaurantes que cumplan con la condición.
-
-![logo](https://raw.githubusercontent.com/AnaSalazar/curricula-js/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/3.jpg)
-
-Agrega un evento mouseover a las imágenes, lo que pase con el efecto es decisión tuya (Cambio de tamaño, muestra de texto, cambio de imagen, información, etc)
-
-![logo](https://lms.laboratoria.la/cohorts/lim-2017-09-bc-core-pm/courses/social-network/02-jquery/08-code-challenges)
-
-Al seleccionar alguno de los restaurantes, deberá mostrarse la información de este a través de un modal.
-
-![logo](https://raw.githubusercontent.com/AnaSalazar/curricula-js/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/5.jpg)
-
-Una vez cerrado el modal debe volver a la vista principal.
-
-![logo](https://raw.githubusercontent.com/AnaSalazar/curricula-js/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/6.jpg)
-
-
-### **Alumna**
-
+>##### Anny Gutierrez Lopez
 >##### Vanessa Mendoza Inoñan

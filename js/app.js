@@ -6,8 +6,8 @@ function colores() {
   Math.floor(Math.random() * 256) + ')';
   setTimeout('colores()', 800);
 }
-$(document).ready(function() {
-	
+$(document).ready(function(event) {
+	event.preventDefault();
 	var $users=[ ];
 	localStorage.setItem('users', JSON.stringify($users));
 

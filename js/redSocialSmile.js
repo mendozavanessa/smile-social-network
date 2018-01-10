@@ -47,10 +47,13 @@ window.addEventListener('load', function() {
     event.preventDefault();
     // console.log(tweetArea.value);
     // console.log(tweetArea.value.lenght);
+		var postIt = document.getElementById('image-post');
+		postIt.src='';
     var div = document.createElement('div');
 		var div2 = document.createElement('div');
 		var image = document.createElement('img');
 		var url = localStorage.url;
+		image.setAttribute('class', 'display-block img-responsive');
 		image.src = url;
 		div2.innerHTML = image;
     var tweet = document.createElement('span');
