@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var $email = $('#email'), $nameInput = $('#nameInput'), /*$checkBox = $('#checkBox'),*/ $password = $('#password'), $radio_girl = $('#radio_girl'), $radio_boy = $('#radio_boy'), $day_select = $('#day'), $month_select = $('#month'), $year_select = $('#year'), $doneBtn = $('#done-btn'), $CODE_TO_VALIDATE_EMAIL = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, $smile_accounts = JSON.parse(localStorage.getItem('users')), inputs = document.getElementsByClassName('formulario__input'), $user, $email_account, $password_account, $day, $month, $year, $gender;
+	var $email = $('#email'), $nameInput = $('#nameInput'), $password = $('#password'), $radio_girl = $('#radio_girl'),$checkBox =$('#checkBox') , $radio_boy = $('#radio_boy'), $day_select = $('#day'), $month_select = $('#month'), $year_select = $('#year'), $doneBtn = $('#done-btn'), $CODE_TO_VALIDATE_EMAIL = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, $smile_accounts = JSON.parse(localStorage.getItem('users')), inputs = document.getElementsByClassName('formulario__input'), $user, $email_account, $password_account, $day, $month, $year, $login_redirect =$('#login-redirect'), $gender;
 
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('keyup', function() {
@@ -10,6 +10,9 @@ $(document).ready(function() {
       }
     });
   }
+	function go_to_login(){
+		window.location.replace("../views/login.html");
+	}
 
 	function validateName() {
 		$user = $nameInput.val();
@@ -55,16 +58,54 @@ $(document).ready(function() {
 		$year = $year_select.val();
 		return ($year_select.val().length > 0);
 	}
+	function agreeWithTerms() {
+		return ($checkBox.prop("checked"));
+	};
 
 	function finalValidation(){
 	 return validateEmail() && validateName() && validatePassword() && agreeWithTerms() && validateGender() && birthday() && birth_month() && birth_year();
   };
 
-	function enableDisable(){
+	function enableDisable(e){
 		if(finalValidation()){
+			var config = {
+      apiKey: "AIzaSyBFn2oMYmLCbIg6G0p6dLrgQpF7-9pjV8M",
+      authDomain: "smile-social-network.firebaseapp.com",
+      databaseURL: "https://smile-social-network.firebaseio.com",
+      projectId: "smile-social-network",
+      storageBucket: "smile-social-network.appspot.com",
+      messagingSenderId: "648080052241"
+    };
+    firebase.initializeApp(config);
+			
+			//Get elements
+		
+			
+			
+				
+			
 			$smile_accounts.unshift({name:$user, email:$email_account, password: $password_account, day:$day, month:$month, year:$year, gender:$gender});
 		  localStorage.setItem('users', JSON.stringify($smile_accounts));
-		  $doneBtn.attr('href', 'principalView.html');
+			
+			//Get email and pass
+				const fire_email = document.getElementById('email').value;
+				const fire_pass = document.getElementById('password').value;
+				const auth = firebase.auth();
+				//Sign in
+				const promise = auth.createUserWithEmailAndPassword(fire_email, fire_pass);
+		
+			
+			//Add a realtime listener
+			firebase.auth().onAuthStateChanged(firebaseUser => {
+				if(firebaseUser) {
+					console.log(firebaseUser);
+					window.location.replace("../views/redSocialSmile.html");
+				} else {
+					console.log('not logged in');
+				}
+			})
+			
+			;
 		}
 	}
 
@@ -75,4 +116,5 @@ $(document).ready(function() {
 	$day_select.change(birthday);
 	$month_select.change(birth_month);
 	$year_select.change(birth_year);
+	$login_redirect.click(go_to_login);
 });
