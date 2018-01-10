@@ -79,11 +79,7 @@ $(document).ready(function() {
     firebase.initializeApp(config);
 			
 			//Get elements
-		
-			
-			
-				
-			
+	
 			$smile_accounts.unshift({name:$user, email:$email_account, password: $password_account, day:$day, month:$month, year:$year, gender:$gender});
 		  localStorage.setItem('users', JSON.stringify($smile_accounts));
 			
@@ -99,7 +95,7 @@ $(document).ready(function() {
 			firebase.auth().onAuthStateChanged(firebaseUser => {
 				if(firebaseUser) {
 					console.log(firebaseUser);
-					window.location.replace("../views/redSocialSmile.html");
+					window.location.replace('../views/principalView.html');
 				} else {
 					console.log('not logged in');
 				}

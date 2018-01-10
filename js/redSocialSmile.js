@@ -48,8 +48,14 @@ window.addEventListener('load', function() {
     // console.log(tweetArea.value);
     // console.log(tweetArea.value.lenght);
     var div = document.createElement('div');
+		var div2 = document.createElement('div');
+		var image = document.createElement('img');
+		var url = localStorage.url;
+		image.src = url;
+		div2.innerHTML = image;
     var tweet = document.createElement('span');
     var tweetText = document.createTextNode(tweetArea.value);
+		
 
     // Versión 0.0.6 (Extra)
     /*
@@ -60,7 +66,9 @@ window.addEventListener('load', function() {
     var hours = moment().format('LT');
     var fechaCompleta = document.createTextNode(hours);
     var espacio = document.createTextNode(' ');
-
+    
+		
+		tweet.appendChild(image);
     tweet.appendChild(tweetText);
     tweet.appendChild(espacio);
     tweet.appendChild(fechaCompleta);
@@ -73,4 +81,17 @@ window.addEventListener('load', function() {
     tweetBtn.disabled = true;
     countDinamic.textContent = MAXCHARACTERS;
   });
+	
+	//Adding data
+	var $smile_accounts = JSON.parse(localStorage.getItem('users'));
+	var $indexNumber = localStorage.getItem('indexNumber');
+	var $userIdent = $('.userIdent');
+	var $genderL = $('.genderL');
+	$userIdent.text($smile_accounts[$indexNumber].name);
+	
+	if($smile_accounts[$indexNumber].gender === 'girl'){
+		$genderL.text('a');
+	} else {
+		$genderL.text('o');
+	}
 });

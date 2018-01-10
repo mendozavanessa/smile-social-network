@@ -40,7 +40,7 @@
 							<li><a href="menu2_recuerdos.html" target="_blank" class="red"><span class="	glyphicon glyphicon-home icono"></span></a></li>
 							<li><a href="menu4_peliculas.html" target="_blank" class="celeste"><span class="	glyphicon glyphicon-envelope icono"></span></a></li>
 							<li><a href="menu4_peliculas.html" target="_blank" class="azul"><span class="	glyphicon glyphicon-bell icono"></span></a></li>
-							<li><a href="menu4_peliculas.html" target="_blank" class="amarillo"><span class="	glyphicon glyphicon-warning-sign icono opcion"></span></span></a></li>
+							<li><a href="menu4_peliculas.html" target="_blank" class="amarillo"><span class="	glyphicon glyphicon-warning-sign icono opcion"></span></a></li>
 							<li><a href="menu5_videos.html" target="_blank" class="pink">OPCIONES<span class="	glyphicon glyphicon-menu-down"></span></a></li>
 						</ul>
 					</div>
@@ -54,7 +54,7 @@
 	  		<div class="row">
 	  			<div class="col-md-12">
 	  				<div class="bienvenido seccion1-bienvenida flex center">
-							<h2>Bienvenida <span class="icon-happy"></span> <strong>ANNIE</strong> </h2>
+							<h2>Bienvenid<span class="genderL"></span><span class="icon-happy"></span> <strong class="userIdent">ANNIE</strong> </h2>
 							<img src="../assets/img/annie1.jpg" alt="">
 							<h3>Anny girl</h3>
 	  				</div>
@@ -96,9 +96,15 @@
 	  	<div class="container-fluid">
 	  		<div class="row">
 	  			<div class="col-md-12">
+	  			<!--Post image-->
+							<div class="uploader-container">
+								<progress value="0" max="100" id="uploader">0%</progress>
+							  <input type="file" value="upload" id="fileButton">
+							</div>
 						<div class="clearfix">
 							<form>
 								<textarea id="tweet-area" placeholder="Sonríe y publica" autofocus></textarea>
+								<img id="image-post" src="">
 								<div class="footer-form clearfix">
 									<input id="tweet-btn" class="tweet-btn" type="submit" value="Publicar" disabled>
 									<span id="count" class="count"></span>
@@ -179,7 +185,116 @@
 	  		</div>
 	  	</div>
 	  </section>
+	  <!--Modal-->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="text-center modal-body img-container">
+        <img id="img-uploaded" class="img" src="" alt="img-upload">
+      </div>
+      <div class="modal-footer">
+        <button id="cancell" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="save" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--================================-->
   </main>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+	var bUrl;
+  var config = {
+    apiKey: "AIzaSyDu_A5CC7DondKgGXJXeJ-2Hf_-Bqr7yBU",
+    authDomain: "kids-161b6.firebaseapp.com",
+    databaseURL: "https://kids-161b6.firebaseio.com",
+    projectId: "kids-161b6",
+    storageBucket: "kids-161b6.appspot.com",
+    messagingSenderId: "486481126896"
+  };
+  firebase.initializeApp(config);
+	var $indexNumber = localStorage.getItem('indexNumber');
+	var $smile_accounts = JSON.parse(localStorage.getItem('users'));
+	var myModal = document.getElementById('myModal');
+	var cancell = document.getElementById('cancell');
+	var save = document.getElementById('save');
+	var imgUploaded = document.getElementById('img-uploaded');
+	var imagePost = document.getElementById('image-post');
+	
+	cancell.addEventListener('click',hideModal);
+	
+	function hideModal() {
+		myModal.setAttribute('class','modal fade');
+	}
+	
+	
+	
+	//Get elements
+	var uploader = document.getElementById('uploader');
+	var fileButton = document.getElementById('fileButton');
+	
+	//Listen for file selection
+	fileButton.addEventListener('change', function(e){
+		//Get file
+		var file = e.target.files[0];
+		
+		//Create a storage reference
+		for(var i = 0;i<$smile_accounts.length;i++){
+		var storageRef = firebase.storage().ref($smile_accounts[$indexNumber].name +$smile_accounts[$indexNumber].password + '_files/' + file.name);
+		}
+		//Upload file
+		var task = storageRef.put(file);
+		var storage = firebase.storage();
+    var storageRef = storage.ref();
+    var tangRef = storageRef.child('images/Tang.png');
+		
+		//Update progress bar
+		task.on('state_changed', 
+			function progress(snapshot) {
+			  var percentage = (snapshot.bytesTransferred /
+				snapshot.totalBytes) * 100;
+			  uploader.value = percentage;
+		  },
+			function error(err) {
+			  alert('Ha ocurrido un horror');
+			  
+		  },
+						
+			function complete(){
+			  console.log('Carga exitosa');
+			var storageRefImg = firebase.storage().ref();
+			var spaceRef = storageRef.child($smile_accounts[$indexNumber].name + $smile_accounts[$indexNumber].password + '_files/' + file.name);
+			storageRefImg.child($smile_accounts[$indexNumber].name + $smile_accounts[$indexNumber].password + '_files/' + file.name).getDownloadURL().then(function(url) {
+             var test = url;
+             console.log(url);
+             document.querySelector('#img-uploaded').src = url;
+				     var urlCode
+             localStorage.url=url;
+				     
+         }).catch(function(error) {
+            console.log('error');
+         });
+			
+			  myModal.setAttribute('class','modal show');
+			function savePhoto() {
+		imagePost.src = document.querySelector('#img-uploaded').src;
+		myModal.setAttribute('class','modal fade');
+	}
+			save.addEventListener('click', savePhoto);
+		  },
+		);
+	})
+	
+	
+	
+</script>
 	<script src="../vendors/moment.js"></script>
 	<script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
 	<script src="../js/redSocialSmile.js"></script>
