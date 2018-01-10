@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?acbgud');
-  src:  url('fonts/icomoon.eot?acbgud#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?acbgud') format('truetype'),
-    url('fonts/icomoon.woff?acbgud') format('woff'),
-    url('fonts/icomoon.svg?acbgud#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?h74u9u');
+  src:  url('fonts/icomoon.eot?h74u9u#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?h74u9u') format('truetype'),
+    url('fonts/icomoon.woff?h74u9u') format('woff'),
+    url('fonts/icomoon.svg?h74u9u#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,24 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-commenting:before {
+.icon-chevron-down:before {
   content: "\e900";
 }
-.icon-chevron-down:before {
-  content: "\e901";
-}
-.icon-user:before {
-  content: "\e971";
-}
-.icon-search:before {
-  content: "\e986";
-}
-.icon-cross:before {
-  content: "\ea0f";
-}
-.icon-paragraph-justify:before {
-  content: "\ea7a";
-}
-.icon-pinterest2:before {
-  content: "\ead2";
+.icon-happy:before {
+  content: "\e9df";
 }

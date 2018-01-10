@@ -4,34 +4,62 @@
   box-sizing: border-box;
 }
 /*********************divison de las tres secciones********************/
-section {
-  outline: 1px solid blue;
+.add-on .input-group-btn > .btn {
+  border-left-width:0;
+  left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
+/* stop the glowing blue shadow */
+.add-on .form-control:focus {
+ box-shadow:none;
+ -webkit-box-shadow:none;
+ border-color: #34f7f3;
+}
+.navbar-form {
+  background: transparent;
+  margin: 2.5em 0;
+}
+.input-group {
+  width: 30em;
+}
+.border {
+  border: 1px solid #34f7f3;
+}
+.icono {
+  font-size: 1em;
+  margin: 0 8px;
+}
+.opcion {
+  margin-left: 1em;
+}
+/* section {
+  outline: 1px solid blue;
+} */
 .seccion1{
   width: 30%;
   height: 100vh;
   margin-top: 8.5em;
-  position: fixed;
-  left: 0;
+}
+.seccion1-bienvenida {
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+  flex-direction: column;
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 0.5em 0.5em;
 }
 .bienvenido {
-  width: 80%;
-  height: 25vh;
-  outline: 1px solid green;
-  margin: auto;
   margin-top: 3em;
-  flex-direction: column;
 }
 .bienvenido img {
   margin: auto;
 }
-.grupos {
-  width: 80%;
-  height: 45vh;
-  outline: 1px solid green;
-  margin: auto;
-  margin-top: 2em;
+h3 {
+  margin: 1em auto;
 }
+/**************************************************************************/
 .newsfeed {
   width: 50%;
   height: 100vh;
@@ -39,6 +67,53 @@ section {
   position: absolute;
   margin-left: 30%;
 }
+.newsfeed span {
+  font-size: 2em;
+  margin: 0.5em 0.5em;
+  color: blue;
+}
+.foto-publicada {
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 0.5em 0.5em;
+  width: 95%;
+  margin: 2em 1.3em;
+}
+.foto-publicada h2 {
+  margin: 0 0.5em;
+}
+.img-publicado img{
+  width: 100%;
+}
+.img-face {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: 3px solid #a4ff7d;
+}
+.img-face img {
+  width: 100%;
+  height: 100%;
+}
+.img-name {
+  margin: 0.5em auto;
+}
+.linea {
+  display: inline-block;
+}
+.input-icon {
+border: 1px solid #ff176a;
+border-radius: 6px;
+width: 90%;
+margin: 0 1em;
+}
+.input-icon input {
+  border-right: none;
+  border: none;
+  width: 70%;
+  margin: 8px 5px;
+}
+/***********************************************************************************/
 .seccion3 {
   width: 20%;
   height: 100vh;
@@ -94,7 +169,11 @@ section {
 /*Form*/
 
 form {
-	padding: 25px 15px;
+	padding: 40px 15px 0 15px;
+  border: 1px solid blue;
+  border-radius: 6px;
+  width: 95%;
+  margin: auto 1.3em;
 }
 textarea {
 	border-top: none;
