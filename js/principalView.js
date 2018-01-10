@@ -5,4 +5,10 @@ $(document).ready(function() {
     pauseOnHover: false,
     animation: 'slide'
   });
+  if ($('.menu-colum').attr('hidden', true)) {
+    $('.menu-colum').removeClass('hidden');
+    $('#icon').click(function() {
+      $('.menu-colum').toggle('slow');
+    });
+  }
 });

@@ -235,7 +235,6 @@ figure .trasera p {
 	text-transform: uppercase;
 	text-align: center;
 }
-
 @media screen and (max-width: 992px) {
 	figure .trasera {
 		/*position: relative;*/
