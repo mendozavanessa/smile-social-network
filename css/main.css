@@ -158,8 +158,7 @@ footer {
 .video {
   text-align: center;
   font-weight: 900;
-  color: blue;
-  background: aqua;
+  color:rgb(65, 65, 133);
 }
 .film1 {
   display: inline-block;
