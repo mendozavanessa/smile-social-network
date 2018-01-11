@@ -7,7 +7,6 @@ function colores() {
   setTimeout('colores()', 800);
 }
 $(document).ready(function(event) {
-	event.preventDefault();
 	var $users=[ ];
 	localStorage.setItem('users', JSON.stringify($users));
 

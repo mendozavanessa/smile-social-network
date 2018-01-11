@@ -134,22 +134,17 @@ footer {
 .circulo a:hover {
   color: #ff176a;
 }
-.login {
-    position: absolute;
-    top: -11em;
-    left: 25em;
-    width: 10em;
-    height: 10em;
-    background-color: aqua;
-
-}
-.signup {
+/*
+.login, .signup {
   position: absolute;
   top: -11em;
-  right: 25em;
+  left: 25em;
   width: 10em;
   height: 10em;
   background-color: aqua;
+} */
+.login, .signup {
+    background-color: aqua;
 }
 .text {
   font-size: 1.5em;
@@ -158,12 +153,10 @@ footer {
 .video {
   text-align: center;
   font-weight: 900;
-  color: blue;
-  background: aqua;
+  color:rgb(65, 65, 133);
 }
 .film1 {
-  display: inline-block;
-  margin: 3em 0 4em 7em;
+  margin: 1em ;
 }
 .juegos {
   border: 4px solid #c400f3;
@@ -192,6 +185,9 @@ footer {
 	display: block;
 }
 @media (min-width: 768px){
+  .film1 {
+    margin: 3em 2em ;
+  }
 }
 
 @media (min-width:1026px) {
@@ -214,4 +210,14 @@ footer {
 }
 @media (min-width: 320px) {
 	
+}
+.container-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
