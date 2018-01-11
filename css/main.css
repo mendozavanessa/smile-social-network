@@ -162,8 +162,7 @@ footer {
   background: aqua;
 }
 .film1 {
-  display: inline-block;
-  margin: 3em 0 4em 7em;
+  margin: 1em ;
 }
 .juegos {
   border: 4px solid #c400f3;
@@ -192,6 +191,9 @@ footer {
 	display: block;
 }
 @media (min-width: 768px){
+  .film1 {
+    margin: 3em 2em ;
+  }
 }
 
 @media (min-width:1026px) {
