@@ -134,22 +134,17 @@ footer {
 .circulo a:hover {
   color: #ff176a;
 }
-.login {
-    position: absolute;
-    top: -11em;
-    left: 25em;
-    width: 10em;
-    height: 10em;
-    background-color: aqua;
-
-}
-.signup {
+/*
+.login, .signup {
   position: absolute;
   top: -11em;
-  right: 25em;
+  left: 25em;
   width: 10em;
   height: 10em;
   background-color: aqua;
+} */
+.login, .signup {
+    background-color: aqua;
 }
 .text {
   font-size: 1.5em;
@@ -215,4 +210,14 @@ footer {
 }
 @media (min-width: 320px) {
 	
+}
+.container-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
